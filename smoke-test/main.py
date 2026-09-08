@@ -26,6 +26,7 @@ if __name__ == "__main__":
 
     print(f"using {args.operator} operator")
     OPERATOR_TABLE[args.operator](args.tb_write)
+    print(os.environ.get("run_var"))
 
     if args.sleep > 0:
         print(f"sleeping for {args.sleep}s before exiting")
