@@ -1,5 +1,6 @@
 import argparse
 import time
+import os
 
 from src.operators.jax import jaxop
 from src.operators.ray import rayop
