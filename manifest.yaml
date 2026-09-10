@@ -11,7 +11,7 @@ builder:
 spec:
   operator: jobset
   image: image
-  command: "python3 -u main.py --operator=jobset --sleep=20"
+  command: "python3 -u main.py --operator=jobset --sleep=300"
 
 
   types:
@@ -27,3 +27,8 @@ spec:
         cpus: 1
         ramRatio: 2
         shmSizeGB: 0
+        accelerators:
+            gpu:
+              count: 1
+              product: "nvidia-tesla-t4"
+              type: "gpu"
